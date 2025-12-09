@@ -52,10 +52,6 @@ phone-microservice/
 ├── docker-compose.yml
 └── README.md
 
-yaml
-Kodu kopyala
-
----
 
 ## 🧰 Kullanılan Teknolojiler
 
@@ -123,7 +119,6 @@ GET /api/phone/count
 db/init.sql:
 
 sql
-Kodu kopyala
 CREATE TABLE registrations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
@@ -133,7 +128,6 @@ CREATE TABLE registrations (
 );
 ### 🐳 Docker Servisleri
 yml
-Kodu kopyala
 services:
   api:
     build: ./api

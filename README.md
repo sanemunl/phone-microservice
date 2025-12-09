@@ -126,7 +126,8 @@ CREATE TABLE registrations (
     phone VARCHAR(6) UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-### 🐳 Docker Servisleri
+
+## 🐳 Docker Servisleri
 yml
 services:
   api:
@@ -149,7 +150,7 @@ services:
       - "8080:80"
 
       
-###  Yaygın Hatalar ve Çözümleri
+## Yaygın Hatalar ve Çözümleri
 ❌ Failed to fetch
 Çözüm: API çalışmıyordur → yeniden build et
 docker compose down

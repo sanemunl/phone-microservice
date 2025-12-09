@@ -158,11 +158,9 @@ services:
 ###  Yaygın Hatalar ve Çözümleri
 ❌ Failed to fetch
 Çözüm: API çalışmıyordur → yeniden build et
-
-css
-Kodu kopyala
 docker compose down
 docker compose up --build
+
 ❌ ModuleNotFoundError: flask_cors
 Çözüm: requirements.txt eksik → API imajını yeniden oluştur
 

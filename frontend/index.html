@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Phone Registration</title></head>
+<body>
+  <h1>Telefon Kaydı</h1>
+  <form id="regForm">
+    <input name="name" placeholder="İsim" required><br>
+    <input name="email" placeholder="Email" required><br>
+    <input name="phone" placeholder="6 haneli telefon" pattern="\d{6}" required><br>
+    <button>Gönder</button>
+  </form>
+  <pre id="out"></pre>
+
+  <script>
+  const out = document.getElementById('out');
+  
+  document.getElementById('regForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    const payload = {
+      name: this.name.value,
+      email: this.email.value,
+      phone: this.phone.value
+    };
+
+    try {
+      const res = await fetch('http://localhost:3000/api/registration', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      out.textContent = JSON.stringify(data, null, 2);
+
+    } catch(err){
+      out.textContent = "Hata: " + err;
+    }
+  });
+</script>
+

@@ -47,7 +47,7 @@ phone-microservice/
 │
 ├── frontend/
 │ ├── index.html
-│ └── script.js
+│ 
 │
 ├── docker-compose.yml
 └── README.md
@@ -129,8 +129,6 @@ CREATE TABLE registrations (
 services:
   api:
     build: ./api
-    ports:
-      - "3000:3000"
 
   db:
     image: mysql:8.0
